@@ -1,0 +1,150 @@
+/* Main Container */
+.dashboard {
+    font-family: 'Arial', sans-serif;
+    padding: 40px;
+    background-color: #4b4b4b; /* Set background color */
+    min-height: 100vh;
+    color: #fff; /* Text color white for contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Payout Calculator Section */
+  .payoutCalculator {
+    padding: 30px;
+    background-color: #3a3a3a; /* Slightly darker background for content */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px #4b4b4b;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 600px; /* Max width for better layout */
+  }
+  
+  .payoutCalculator h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #00E77F; /* Green color for heading */
+  }
+  
+  .payoutCalculator label {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #aaa;
+    font-weight: 500;
+  }
+  
+  .payoutCalculator input {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #00E77F; /* Border color */
+    width: 250px;
+    margin-bottom: 20px;
+    transition: border 0.3s ease, background-color 0.3s ease;
+    background-color: #3a3a3a; /* Dark input background */
+    color: #fff; /* White text inside input */
+  }
+  
+  .payoutCalculator input:focus {
+    border: 1px solid #00E77F; /* Green border on focus */
+    outline: none;
+    background-color: #3a3a3a; /* Slightly lighter background on focus */
+  }
+  
+  .payoutCalculator button {
+    padding: 12px 30px;
+    background-color: #00E77F;
+    color: #aaa;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+  }
+  
+  .payoutCalculator button:hover {
+    background-color: #00E77F; /* Darker green on hover */
+    transform: scale(1.05); /* Slight scale effect */
+  }
+  
+  /* Total Payout Display */
+  .payoutCalculator h3 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #00E77F;
+    margin-top: 20px;
+  }
+  
+  /* Graph Container */
+  .chartContainer {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: #3a3a3a;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px #4b4b4b;
+  }
+  
+  /* Export Buttons Section */
+  .exportOptions {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px; /* Max width for better button layout */
+  }
+  
+  .exportOptions button {
+    padding: 12px 30px;
+    background-color: #3a3a3a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 30%; /* Button width to keep it consistent */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .exportOptions button:hover {
+    background-color: #00E77F; /* Orange color on hover */
+    transform: scale(1.05);
+  }
+  
+  /* Footer Section */
+  .footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  /* Media Query for Responsiveness */
+  @media (max-width: 768px) {
+    .payoutCalculator {
+      padding: 20px;
+    }
+  
+    .payoutCalculator input {
+      width: 200px;
+    }
+  
+    .exportOptions {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+  
+    .exportOptions button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
