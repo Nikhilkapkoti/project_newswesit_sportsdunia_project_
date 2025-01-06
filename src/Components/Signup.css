@@ -1,24 +1,32 @@
 /* Signup.css */
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Softer light background for a clean look */
     margin: 0;
     padding: 0;
 }
 
 .signup-container {
     max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 100px auto; /* Center the container vertically */
+    padding: 40px; /* Increased padding for a more spacious feel */
+    background: #ffffff; /* White background for the form */
+    border-radius: 12px; /* Slightly larger border radius for a softer look */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Deeper shadow for a more pronounced effect */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.signup-container:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 h2 {
     text-align: center;
-    color: #333;
+    color: #333; /* Dark gray for the heading */
+    margin-bottom: 30px; /* Added margin for spacing */
+    font-size: 24px; /* Increased font size for better visibility */
 }
 
 form {
@@ -27,30 +35,93 @@ form {
 }
 
 label {
-    margin-bottom: 5px;
-    color: #555;
+    margin-bottom: 8px; /* Increased margin for better spacing */
+    color: #555; /* Medium gray for labels */
+    font-weight: bold; /* Bold labels for better readability */
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 14px; /* Increased padding for better touch targets */
+    margin-bottom: 20px; /* Increased margin for better spacing */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 6px; /* Slightly larger border radius */
     font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for border color */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle blue glow on focus */
+    outline: none; /* Remove default outline */
 }
 
 button {
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
+    padding: 14px; /* Increased padding for better touch targets */
+    background-color: #007bff; /* Bright blue background */
+    color: white; /* White text color */
     border: none;
-    border-radius: 4px;
+    border-radius: 6px; /* Slightly larger border radius */
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+button:active {
+    transform: translateY(0); /* Reset lift on click */
+}
+
+
+/* Signup.css */
+
+/* Existing styles... */
+
+.google-signin-container {
+    margin-top: 20px; /* Space between the form and the Google button */
+}
+
+.google-signin-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background-color: #4285F4; /* Google blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    width: 100%; /* Full width */
+}
+
+.google-signin-btn:hover {
+    background-color: #357AE8; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.google-signin-btn:active {
+    transform: translateY(0); /* Reset lift on click */
+}
+
+/* Existing styles... */
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .signup-container {
+        padding: 20px; /* Reduce padding on smaller screens */
+        margin: 50px auto; /* Adjust margin for smaller screens */
+    }
+
+    h2 {
+        font-size: 20px; /* Smaller font size for smaller screens */
+    }
 }
