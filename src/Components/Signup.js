@@ -1,22 +1,25 @@
 // Signup.js
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Signup.css'; // Import the CSS file
 
 const Signup = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const handleSignup = (e) => {
         e.preventDefault();
-        // Here you would typically handle signup logic
         console.log('Signing up with:', { username, email, password });
-        
+        navigate('/dashboard');
+    };
+
+    const handleGoogleSignup = () => {
+        // Here you would typically handle Google signup logic
+        console.log('Continue with Google clicked');
         // For demonstration, we'll just redirect to the dashboard
-        // In a real application, you would validate the credentials
-        history.push('/dashboard');
+        navigate('/dashboard');
     };
 
     return (
@@ -52,6 +55,11 @@ const Signup = () => {
                 </div>
                 <button type="submit">Signup</button>
             </form>
+            <div className="google-signin-container">
+                <button className="google-signin-btn" onClick={handleGoogleSignup}>
+                    Continue with Google
+                </button>
+            </div>
         </div>
     );
 };
